@@ -3,65 +3,186 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>李一函 | 电气工程师个人主页</title>
+
+<title>苏凯锋 | 新能源电气工程师</title>
 
 <style>
-body{
+
+*{
     margin:0;
-    font-family:"Microsoft YaHei",Arial;
-    background:#f5f7fa;
-    color:#333;
+    padding:0;
+    box-sizing:border-box;
+    font-family:"Microsoft YaHei",sans-serif;
 }
 
-header{
-    background:#0b3d91;
+body{
+    background:#07111f;
     color:white;
-    padding:50px 20px;
+    line-height:1.6;
+}
+
+
+/* 背景动画 */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:600px;
+    height:600px;
+    background:linear-gradient(45deg,#00e5ff,#00ff88);
+    border-radius:50%;
+    filter:blur(160px);
+    opacity:.25;
+    top:-200px;
+    left:-200px;
+    animation:move 8s infinite alternate;
+}
+
+
+@keyframes move{
+    from{
+        transform:translate(0,0);
+    }
+    to{
+        transform:translate(300px,200px);
+    }
+}
+
+
+/* 导航 */
+
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    padding:20px 10%;
+    background:rgba(0,0,0,.4);
+    backdrop-filter:blur(10px);
+    z-index:10;
+}
+
+nav h2{
+    color:#00ff99;
+}
+
+
+/* 首页 */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
     text-align:center;
+    padding:80px 20px;
 }
 
-header h1{
-    font-size:40px;
+
+.hero h1{
+    font-size:55px;
+    animation:fade 1.5s;
 }
 
-.container{
-    max-width:1000px;
-    margin:30px auto;
-    padding:20px;
+
+.hero h3{
+    margin-top:20px;
+    color:#00e5ff;
 }
+
+
+.hero p{
+    margin:20px;
+    max-width:700px;
+    color:#ccc;
+}
+
+
+
+.btn{
+    display:inline-block;
+    margin:15px;
+    padding:12px 30px;
+    border-radius:30px;
+    background:#00ff99;
+    color:#001;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+
+.btn:hover{
+    transform:scale(1.1);
+}
+
+
+
+/* 内容 */
+
+section{
+    padding:80px 10%;
+}
+
+
+.title{
+    font-size:35px;
+    color:#00ff99;
+    margin-bottom:30px;
+}
+
+
 
 .card{
-    background:white;
-    padding:25px;
-    margin-bottom:20px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.08);
-}
-
-h2{
-    color:#0b3d91;
-}
-
-.skill span{
-    display:inline-block;
-    background:#e8f0ff;
-    padding:8px 15px;
-    margin:5px;
+    background:rgba(255,255,255,.08);
     border-radius:20px;
+    padding:30px;
+    margin:20px 0;
+    backdrop-filter:blur(10px);
+    transition:.4s;
 }
 
-.project{
-    border-left:4px solid #0b3d91;
-    padding-left:15px;
-    margin:15px 0;
+
+.card:hover{
+    transform:translateY(-10px);
 }
+
+
+
+.skills span{
+    display:inline-block;
+    background:#00e5ff;
+    color:#001;
+    padding:8px 18px;
+    border-radius:20px;
+    margin:8px;
+}
+
+
 
 footer{
     text-align:center;
-    padding:20px;
-    background:#222;
-    color:white;
+    padding:30px;
+    color:#aaa;
 }
+
+
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(40px);
+}
+
+to{
+opacity:1;
+transform:none;
+}
+
+}
+
+
 </style>
 
 </head>
@@ -69,53 +190,143 @@ footer{
 
 <body>
 
-<header>
 
-<h1>李一函</h1>
+<nav>
+<h2>SUKAIFENG</h2>
+</nav>
+
+
+
+<div class="hero">
+
+
+<h1>苏凯锋</h1>
+
+<h3>新能源电气工程师求职主页</h3>
+
 
 <p>
-电气工程及其自动化 | 新能源电气工程师方向
+厦门大学嘉庚学院 · 电气工程及其自动化<br>
+专注新能源、电气控制、电力系统与自动化技术发展
 </p>
 
-<p>
-厦门大学嘉庚学院
-</p>
 
-</header>
-
-
-<div class="container">
+<a class="btn" href="#about">
+了解更多
+</a>
 
 
-<div class="card">
+<a class="btn" href="resume.pdf">
+下载简历
+</a>
 
-<h2>关于我</h2>
 
-<p>
-本人为电气工程及其自动化专业学生，
-关注新能源、电力系统、自动化控制方向。
-希望未来发展为新能源电气工程师，
-持续提升工程实践能力。
-</p>
 
 </div>
 
 
 
+
+<section id="about">
+
+
+<h2 class="title">
+关于我
+</h2>
+
+
 <div class="card">
 
-<h2>专业技能</h2>
+<p>
+姓名：苏凯锋
+</p>
 
-<div class="skill">
+<p>
+专业：电气工程及其自动化
+</p>
 
-<span>电气工程基础</span>
-<span>AutoCAD</span>
+<p>
+学校：厦门大学嘉庚学院
+</p>
+
+<p>
+学历：本科应届生
+</p>
+
+<p>
+求职方向：新能源电气工程师 / 电气自动化工程师
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+专业技能
+</h2>
+
+
+<div class="card skills">
+
 <span>PLC控制</span>
-<span>MATLAB</span>
-<span>电力电子</span>
+
+<span>电气控制</span>
+
+<span>AutoCAD制图</span>
+
+<span>MATLAB仿真</span>
+
 <span>新能源系统</span>
 
+<span>电力系统基础</span>
+
+<span>自动化技术</span>
+
+
 </div>
+
+
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+项目经历
+</h2>
+
+
+<div class="card">
+
+
+<h3>
+PLC自动控制系统设计
+</h3>
+
+
+<p>
+
+负责控制方案设计、PLC程序编写、
+电气线路设计及系统调试。
+
+通过项目实践提升自动化控制能力。
+
+</p>
+
 
 </div>
 
@@ -124,90 +335,119 @@ footer{
 
 <div class="card">
 
-<h2>项目经历</h2>
 
+<h3>
+新能源方向技术学习
+</h3>
 
-<div class="project">
-
-<h3>光伏储能系统设计项目</h3>
 
 <p>
-学习并设计光伏储能系统结构，
-包括储能电池、PCS变流器、
-BMS管理系统以及电气保护方案。
+
+学习光伏发电、储能系统、
+新能源电力转换等相关知识。
+
+关注新能源行业发展趋势。
+
 </p>
 
-</div>
-
-
-
-<div class="project">
-
-<h3>PLC自动控制项目</h3>
-
-<p>
-基于西门子PLC进行自动化控制设计，
-学习TIA Portal、HMI以及工业控制流程。
-</p>
 
 </div>
 
 
-</div>
+
+</section>
 
 
+
+
+
+
+<section>
+
+
+<h2 class="title">
+职业规划
+</h2>
 
 
 <div class="card">
 
-<h2>就业方向</h2>
 
 <p>
-目标岗位：
+
+目标进入新能源、电力设备、
+自动化控制相关企业。
+
 </p>
 
-<ul>
 
-<li>新能源电气工程师</li>
+<p>
 
-<li>储能系统工程师</li>
+未来发展方向：
 
-<li>电气设计工程师</li>
+新能源电气工程师
 
-<li>自动化工程师</li>
+↓
 
-</ul>
+项目工程师
+
+↓
+
+技术负责人
+
+</p>
+
 
 </div>
 
 
+</section>
+
+
+
+
+
+
+<section>
+
+
+<h2 class="title">
+联系方式
+</h2>
 
 
 <div class="card">
 
-<h2>联系方式</h2>
 
 <p>
-邮箱：你的邮箱
+GitHub：
+lyhnb1204-ctrl
 </p>
 
+
 <p>
-电话：你的电话
+Email：
+你的邮箱
 </p>
+
 
 </div>
 
 
-</div>
+</section>
+
+
 
 
 
 <footer>
 
-© 2026 李一函 Personal Website
+© 2026 苏凯锋 | Electrical Engineer Portfolio
 
 </footer>
 
 
+
 </body>
+
 </html>
